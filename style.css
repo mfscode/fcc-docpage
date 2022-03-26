@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+nav#navbar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    font-size: 2em;
+}
+
+main#main-doc {
+    padding-left: 26rem;
+    font-size: 2em;
+}
+
+nav * {
+    border: .1rem grey solid;
+    padding: .1rem;
+}
+
+nav a:link,
+nav a:visited {
+    color: grey;
+}
+
+nav a:hover,
+nav a:active {
+    color: rgb(68, 68, 68);
+}
