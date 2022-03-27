@@ -11,14 +11,14 @@
 
 <body>
     <main id="main-doc">
-        <section>
-            <header id="GIT">
+        <section class="main-section" id="GIT">
+            <header>
                 GIT
             </header>
             <p>This documentation is going to teach you on what, why, and how Git is</p>
         </section>
-        <section>
-            <header id="Quick_Overview">
+        <section class="main-section" id="Quick_Overview">
+            <header>
                 Quick Overview
             </header>
             <p>So, what is git?</p>
@@ -30,8 +30,8 @@
             <p>It helps you to save a version of a file (or in this example, the report in a certain point of time), revert to the previous version of that file (e.g when the change of the file turns out breaking the file, you would like to revert to the
                 version before the change), and then publish / store that file to a directory or, what we developer love to call, a repository, whether it's remote (on another side e.g GitHub) or locally in your storage system.</p>
         </section>
-        <section>
-            <header id="A_(kinda)_Short_History_Of_Git">
+        <section class="main-section" id="A_(kinda)_Short_History_Of_Git">
+            <header>
                 A (kinda) Short History Of Git
             </header>
             <p>As with many great things in life, Git began with a bit of creative destruction and fiery controversy.
@@ -50,13 +50,77 @@
             <p>Since its birth in 2005, Git has evolved and matured to be easy to use and yet retain these initial qualities. It's amazingly fast, it's very efficient with large projects, and it has an incredible branching system fir nin-linear development
                 (See <a href="#">Git Branching)</a></p>
         </section>
-        <section>
+        <section class="main-section" id="Git_Basics">
             <header>
-                #
+                Git Basics
             </header>
-            <p></p>
+            <p>This chapter covers every basic command like how to initialize a repo, how to clone a repo, adding and committing, and push it to a remote repo like GitHub</p>
+            <section id="getRepo">
+                <h4>Getting a Git repository</h4>
+                <p>You typically obtain Git repositories in one of two ways:</p>
+                <ol>
+                    <li>You can take a local directory that is currently not under version control, and then turn it into a Git repository, or</li>
+                    <li>You can clone an existing Git repository from else where (either from a remote repo like from GitHub, or from other machines)</li>
+                </ol>
+                <section id="localrepo">
+                    <p><b>Initialize from local directory</b></p>
+                    <p style="margin-bottom: 0;">If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project's dirextory. If you've never done this, it looks like this (if you're on
+                        a windows system)</p>
+                    <code>$ cd C:/Users/user/yourProjectName</code>
+                    <p style="margin-bottom: 0; margin-top: 10px;">And then type this:</p>
+                    <code>$ git init</code>
+                    <p>This creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet.</p>
+                    <p>If your directory is not empty (you already have something in it e.g html files), after you initialize git in the folder, you would want to commit</p>
+                    <code>$ git commit -m "yourMassageAboutTheCommit"</code>
+                </section>
+                <section id="outerrepo">
+                    <p><b>Clone an Existing Repository</b></p>
+                    <p style="margin-bottom: 0;">If you want to get a copy of an existing Git repository -- for example, a project you'd like to contribute to-- the command you need is
+                        <span style="font-family: 'Courier New', Courier, monospace;">$ git clone -theRepositoryUrl-</span>, The url doesn't need the dash (-) on it</p>
+                    <p>For example, if you want to clone the Git linkable library called libgit2, you can do so like this:</p>
+                    <code>$ git clone https://github.com/libgit2/libgit2</code>
+                    <p style="margin-top: 10px;">That creates a directory named <span style="color: rgb(224, 55, 55);">libgit2</span>, initializes a <span style="color: rgb(224, 55, 55);">.git</span> directory inside it, pulls down all the data for that repository, and checks out
+                        a working copy of the latest version. If you go into the new <span style="color: rgb(224, 55, 55);">libgit2</span> directory that was just created, you'll see the project files in there, ready to be worked on or used
+                    </p>
+                    <p>If you want to clone the repository into a directory named something other than <span style="color: rgb(224, 55, 55);">libgit2</span>, you can specify the new directory name as an additional argument:</p>
+                    <code>$ git clone https://github.com/libgit2/libgit2 mylibgit</code>
+                    <p style="margin-top: 10px;">That command does the same thing as the previous one, but the target directory is called <span style="color: rgb(224, 55, 55);">mylibgit</span>.</p>
+                </section>
+            </section>
+            <section id="getRepo">
+                <h4>Adding and committing</h4>
+                <!-- <p>You typically obtain Git repositories in one of two ways:</p> -->
+                <ol>
+                    <li>You can take a local directory that is currently not under version control, and then turn it into a Git repository, or</li>
+                    <li>You can clone an existing Git repository from else where (either from a remote repo like from GitHub, or from other machines)</li>
+                </ol>
+                <section id="localrepo">
+                    <p><b>Initialize from local directory</b></p>
+                    <p style="margin-bottom: 0;">If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project's dirextory. If you've never done this, it looks like this (if you're on
+                        a windows system)</p>
+                    <code>$ cd C:/Users/user/yourProjectName</code>
+                    <p style="margin-bottom: 0; margin-top: 10px;">And then type this:</p>
+                    <code>$ git init</code>
+                    <p>This creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet.</p>
+                    <p>If your directory is not empty (you already have something in it e.g html files), after you initialize git in the folder, you would want to commit</p>
+                    <code>$ git commit -m "yourMassageAboutTheCommit"</code>
+                </section>
+                <section id="outerrepo">
+                    <p><b>Clone an Existing Repository</b></p>
+                    <p style="margin-bottom: 0;">If you want to get a copy of an existing Git repository -- for example, a project you'd like to contribute to-- the command you need is
+                        <span style="font-family: 'Courier New', Courier, monospace;">$ git clone -theRepositoryUrl-</span>, The url doesn't need the dash (-) on it</p>
+                    <p>For example, if you want to clone the Git linkable library called libgit2, you can do so like this:</p>
+                    <code>$ git clone https://github.com/libgit2/libgit2</code>
+                    <p style="margin-top: 10px;">That creates a directory named <span style="color: rgb(224, 55, 55);">libgit2</span>, initializes a <span style="color: rgb(224, 55, 55);">.git</span> directory inside it, pulls down all the data for that repository, and checks out
+                        a working copy of the latest version. If you go into the new <span style="color: rgb(224, 55, 55);">libgit2</span> directory that was just created, you'll see the project files in there, ready to be worked on or used
+                    </p>
+                    <p>If you want to clone the repository into a directory named something other than <span style="color: rgb(224, 55, 55);">libgit2</span>, you can specify the new directory name as an additional argument:</p>
+                    <code>$ git clone https://github.com/libgit2/libgit2 mylibgit</code>
+                    <p style="margin-top: 10px;">That command does the same thing as the previous one, but the target directory is called <span style="color: rgb(224, 55, 55);">mylibgit</span>.</p>
+                </section>
+            </section>
         </section>
-        <section>
+        <section class="main-section">
             <header>
                 #
             </header>
@@ -69,7 +133,7 @@
         <a class="nav-link" href="#GIT">GIT</a>
         <a class="nav-link" href="#Quick_Overview">Quick Overview</a>
         <a class="nav-link" href="#A_(kinda)_Short_History_Of_Git">A (kinda) Short History of Git</a>
-        <a class="nav-link" href="#"></a>
+        <a class="nav-link" href="#Git_Basics">Git Basics</a>
         <a class="nav-link" href="#"></a>
     </nav>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
