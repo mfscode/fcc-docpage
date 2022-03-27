@@ -31,7 +31,24 @@ main#main-doc {
 }
 
 main#main-doc p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    text-indent: 1rem;
+    line-height: 2rem;
+}
+
+
+/* main#main-doc p::first-line {
+    color: red;
+    inden
+} */
+
+main#main-doc header {
+    margin-bottom: .5rem;
+}
+
+section {
+    margin-bottom: 1rem;
 }
 
 nav * {
