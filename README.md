@@ -12,11 +12,11 @@
 
 <!-- 4. Each <section> element with the class of "main-section" should also have an id comprised of the <header> innerText contained within it, with underscores in place of spaces. The id may include special characters if there are special characters in the respective <header> innerText. (e.g. The <section> that contains the header, "JavaScript & Java", should have a corresponding id="JavaScript_&_Java"). -->
 
-5. The .main-section elements should contain at least 10 <p> elements total (not each).
+<!-- 5. The .main-section elements should contain at least 10 <p> elements total (not each). -->
 
 6. The .main-section elements should contain at least 5 <code> elements total (not each).
 
-7. The .main-section elements should contain at least 5 <li> items total (not each).
+<!-- 7. The .main-section elements should contain at least 5 <li> items total (not each). -->
 
 <!-- 8. I can see a <nav> element with a corresponding id="navbar". -->
 
