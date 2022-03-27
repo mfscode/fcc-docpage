@@ -13,6 +13,16 @@ body {
     min-height: 100vh;
 }
 
+a:link,
+a:visited {
+    color: grey;
+}
+
+a:hover,
+a:active {
+    color: rgb(68, 68, 68);
+}
+
 nav#navbar {
     display: flex;
     flex-direction: column;
@@ -37,31 +47,33 @@ main#main-doc p {
     line-height: 2rem;
 }
 
-
-/* main#main-doc p::first-line {
-    color: red;
-    inden
-} */
-
 main#main-doc header {
     margin-bottom: .5rem;
 }
 
+main#main-doc ul li {
+    font-size: 1.2rem;
+    text-indent: 1rem;
+    list-style-position: inside;
+    margin-bottom: .5rem;
+}
+
+main#main-doc p a:link,
+main#main-doc p a:visited {
+    color: rgb(39, 39, 39);
+    transition: 300ms;
+}
+
+main#main-doc p a:hover,
+main#main-doc p a:active {
+    color: rgb(155, 155, 155);
+}
+
 section {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 nav * {
     border: .1rem grey solid;
-    padding: .1rem;
-}
-
-nav a:link,
-nav a:visited {
-    color: grey;
-}
-
-nav a:hover,
-nav a:active {
-    color: rgb(68, 68, 68);
+    padding: 1rem;
 }
