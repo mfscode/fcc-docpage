@@ -36,8 +36,9 @@ nav#navbar {
 
 main#main-doc {
     padding: 1rem;
-    padding-left: 26rem;
+    padding-left: 27rem;
     font-size: 2em;
+    text-align: justify;
 }
 
 main#main-doc p {
@@ -61,7 +62,7 @@ main#main-doc ul li {
 main#main-doc p a:link,
 main#main-doc p a:visited {
     color: rgb(39, 39, 39);
-    transition: 300ms;
+    transition: 150ms;
 }
 
 main#main-doc p a:hover,
@@ -75,5 +76,10 @@ section {
 
 nav * {
     border: .1rem grey solid;
+    border-top: transparent;
     padding: 1rem;
+}
+
+nav header {
+    border-top: .1rem grey solid;
 }
