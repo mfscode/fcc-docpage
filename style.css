@@ -11,6 +11,7 @@
 body {
     min-width: 100%;
     min-height: 100vh;
+    background-color: rgb(245, 245, 245);
 }
 
 a:link,
@@ -52,7 +53,7 @@ main#main-doc header {
     margin-bottom: .5rem;
 }
 
-main#main-doc ul li {
+main#main-doc li {
     font-size: 1.2rem;
     text-indent: 1rem;
     list-style-position: inside;
@@ -72,6 +73,23 @@ main#main-doc p a:active {
 
 section {
     margin-bottom: 2rem;
+}
+
+section #getRepo {
+    padding-left: 2rem;
+}
+
+section #getRepo h4 {
+    margin-bottom: .5rem;
+}
+
+main#main-doc section code {
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    padding: .25rem;
+    background-color: lightgray;
+    border: grey 2px solid;
 }
 
 nav * {

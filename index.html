@@ -89,35 +89,35 @@
             </section>
             <section id="getRepo">
                 <h4>Adding and committing</h4>
-                <!-- <p>You typically obtain Git repositories in one of two ways:</p> -->
-                <ol>
-                    <li>You can take a local directory that is currently not under version control, and then turn it into a Git repository, or</li>
-                    <li>You can clone an existing Git repository from else where (either from a remote repo like from GitHub, or from other machines)</li>
-                </ol>
-                <section id="localrepo">
-                    <p><b>Initialize from local directory</b></p>
-                    <p style="margin-bottom: 0;">If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project's dirextory. If you've never done this, it looks like this (if you're on
-                        a windows system)</p>
-                    <code>$ cd C:/Users/user/yourProjectName</code>
-                    <p style="margin-bottom: 0; margin-top: 10px;">And then type this:</p>
-                    <code>$ git init</code>
-                    <p>This creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet.</p>
-                    <p>If your directory is not empty (you already have something in it e.g html files), after you initialize git in the folder, you would want to commit</p>
-                    <code>$ git commit -m "yourMassageAboutTheCommit"</code>
-                </section>
-                <section id="outerrepo">
-                    <p><b>Clone an Existing Repository</b></p>
-                    <p style="margin-bottom: 0;">If you want to get a copy of an existing Git repository -- for example, a project you'd like to contribute to-- the command you need is
-                        <span style="font-family: 'Courier New', Courier, monospace;">$ git clone -theRepositoryUrl-</span>, The url doesn't need the dash (-) on it</p>
-                    <p>For example, if you want to clone the Git linkable library called libgit2, you can do so like this:</p>
-                    <code>$ git clone https://github.com/libgit2/libgit2</code>
-                    <p style="margin-top: 10px;">That creates a directory named <span style="color: rgb(224, 55, 55);">libgit2</span>, initializes a <span style="color: rgb(224, 55, 55);">.git</span> directory inside it, pulls down all the data for that repository, and checks out
-                        a working copy of the latest version. If you go into the new <span style="color: rgb(224, 55, 55);">libgit2</span> directory that was just created, you'll see the project files in there, ready to be worked on or used
-                    </p>
-                    <p>If you want to clone the repository into a directory named something other than <span style="color: rgb(224, 55, 55);">libgit2</span>, you can specify the new directory name as an additional argument:</p>
-                    <code>$ git clone https://github.com/libgit2/libgit2 mylibgit</code>
-                    <p style="margin-top: 10px;">That command does the same thing as the previous one, but the target directory is called <span style="color: rgb(224, 55, 55);">mylibgit</span>.</p>
-                </section>
+                <p>Essentially, adding is inserting a version of a file to the staging phase, committing is finalizing the staging phase to enter the pushing stage where the files are ready to be recorded on the repository. This are the things that Version
+                    Controllers do, it supervise each version of a file, and able to take it back to the pre-edited version, or record and save it to a repository</p>
+                <p>Other way you can see it, when you do a commit, you are asked to write a comment about that commit. meanwhile, adding a change to a staging phase does not require you to add a comment. why is that? Well, because committing is actually
+                    recording your changes on your local git. The comment that you are asked to insert is like writing your comment to a version of a stage of the code. While adding is to make the changes ready to be <b>committed</b> to a "version" of
+                    the code</p>
+                <p>Okay, now let's see the way to add and commit your your code to your repo.</p>
+                <p><b>"Adding" a file to the staging phase</b></p>
+                <p style="margin-bottom: 0;">This is how you add your code and ready-ing it to be committed</p>
+                <code style="margin-left: 20px;">$ git add -yourFileName-</code>
+                <p style="margin-top: 10px;">(you don't need to add the dashes (-))</p>
+                <p style="margin-bottom: 0;">If you want to add <b>ALL</b> the files within you current folder, you replace the -yourFileName- with a dot (.)</p>
+                <code style="margin-left: 20px;">$ git add .</code>
+                <p style="margin-top: 10px;">(This will add all your changed file in your current folder)</p>
+                <p style="margin-bottom: 0;">Once you done that, you can see the <i>status</i> of the staging phase. This will show you all your file that you add (which means it's in the staging phase) and the files that you haven't add to the staging phase (you haven't add those
+                    files). This is the command:</p>
+                <code style="margin-left: 20px;">$ git status</code>
+                <p style="margin-top: 2rem;font-size: 1.5rem;"><b>Committing files from your staging phase</b></p>
+                <p>Once you're ready to commit a file, it means that you're about to make a "version" of the change on git, don't worry, it wont actually affect the "version" if you edit the code, and if you do another commit, it will 'add' a "version" instead
+                    of overwriting the previous "version"</p>
+                <p><b>Change a file -> add the file -> commit the file -> git make "version 1.0"</b></p>
+                <p><b>Change the file again -> add the file -> commit the file -> git make "version 1.1"</b></p>
+                <p>(note that if you made a bunch of 'add' but don't actually commit them after you do the 'add' command, it won't make a new version, until you do commit)</p>
+                <p style="margin-bottom: 0;">This is the command to commit your change:</p>
+                <code>$ git commit -m "Your massage about the commit"</code>
+                <p style="margin-top: 10px;">(For this one, you actually need to include the quotation mark (") and you need to make a comment about what is different between this "version" and the previous one (you deleted something, or you added something))</p>
+                <p style="margin-bottom: 0;">otherwise, you can just do:</p>
+                <code>$ git commit</code>
+                <p style="margin-top: 10px;">If you do it this way, you would be asked to insert a massage in other way, whether a pop-up or other way</p>
+                <p>The point is, <b>You need to add a comment that explain the difference between this "version" and the previous "version"</b></p>
             </section>
         </section>
         <section class="main-section">
