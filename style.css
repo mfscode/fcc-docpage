@@ -14,6 +14,12 @@ body {
     background-color: rgb(245, 245, 245);
 }
 
+@media (max-width:375px) {
+    html {
+        font-size: 8px;
+    }
+}
+
 a:link,
 a:visited {
     color: grey;
@@ -35,11 +41,33 @@ nav#navbar {
     font-size: 2em;
 }
 
+@media (max-width:375px) {
+    nav#navbar {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        width: 100%;
+        position: initial;
+        font-size: 2em;
+    }
+}
+
 main#main-doc {
     padding: 1rem;
     padding-left: 27rem;
     font-size: 2em;
     text-align: justify;
+}
+
+@media (max-width:375px) {
+    main#main-doc {
+        padding: 1rem;
+        padding-left: 0;
+        font-size: 2em;
+        text-align: justify;
+        position: absolute;
+        top: 30vh;
+    }
 }
 
 main#main-doc p {
